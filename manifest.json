@@ -1,0 +1,25 @@
+{
+  "name": "chat demo",
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "js": [ "hello.js" ],
+      "matches": [ "http://*.google.com.hk/*", "https://*.google.com.hk/*" ],
+      "run_at": "document_end"
+    }
+  ],
+  "manifest_version": 2,
+  "background": { "scripts": [ "background.js" ] },
+  "browser_action": {
+    "default_icon": "icon-16.png",
+    "default_title": "hello chat 2",
+    "icons": [ "icon-16.png" ],
+    "name": "chat demo",
+    "default_popup": "popup.html"
+  },
+  "description": "chat demo",
+  "icons": {
+    "128": "icon-128.png"
+  },
+  "permissions": [ "tabs" ]
+}
